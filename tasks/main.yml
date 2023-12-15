@@ -1,5 +1,12 @@
 ---
 # tasks file for atb-ansible-zippeddata
+- name: create directories for unzipped data
+  ansible.builtin.file:
+    path: "{{ item.path }}"
+    recurse: yes
+    state: directory
+  with_items: "{{ zippeddata_data }}"
+
 - name: download unzipped data
   ansible.builtin.unarchive:
     src: "{{ item.url }}"
