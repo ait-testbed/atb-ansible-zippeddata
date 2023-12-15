@@ -1,0 +1,8 @@
+---
+# tasks file for atb-ansible-zippeddata
+- name: download unzipped data
+  ansible.builtin.unarchive:
+    src: "{{ item.url }}"
+    dest: "{{ item.path }}"
+    remote_src: yes
+  with_items: "{{ zippeddata_data }}"
