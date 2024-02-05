@@ -1,6 +1,6 @@
 # Ansible-Role: atb-ansible-zippeddata
 
-AECID-TESTBED: Downloads archives from a url and unarchives them in a specified location.
+AECID-TESTBED: Downloads archives from a url and unarchives them in a specified location. As default it takes datasets from https://zenodo.org/records/7477560
 
 
 ## Requirements
